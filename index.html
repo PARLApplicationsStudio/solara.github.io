@@ -71,7 +71,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ message: userInput })
+            body: JSON.stringify({ message: userInput, agentId: 'd9b403ae-a270-49cb-b82a-a737a6c91629' })
         })
         .then(response => response.json())
         .then(data => {
