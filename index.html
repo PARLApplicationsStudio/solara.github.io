@@ -1,99 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot</title>
-    <style>
-        /* Basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .chat-container {
-            width: 300px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .chat-box {
-            height: 400px;
-            overflow-y: auto;
-            padding: 10px;
-        }
-        .input-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-        input[type="text"] {
-            flex: 1;
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-right: 10px;
-        }
-        button {
-            padding: 8px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-
-<div class="chat-container">
-    <div class="chat-box" id="chat-box"></div>
-    <div class="input-box">
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
-
-<script>
-    // Function to send user message to Dialogflow
-    function sendMessage() {
-        var userInput = document.getElementById('user-input').value;
-        displayMessage(userInput, 'user');
-        // Send user message to Dialogflow
-        fetch('/send-message', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ message: userInput, agentId: 'd9b403ae-a270-49cb-b82a-a737a6c91629' })
-        })
-        .then(response => response.json())
-        .then(data => {
-            displayMessage(data.message, 'bot');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-        document.getElementById('user-input').value = ''; // Clear input field
-    }
-
-    // Function to display messages in the chat box
-    function displayMessage(message, sender) {
-        var chatBox = document.getElementById('chat-box');
-        var messageElement = document.createElement('div');
-        messageElement.classList.add(sender);
-        messageElement.innerText = message;
-        chatBox.appendChild(messageElement);
-        // Scroll to the bottom of the chat box
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-</script>
-
-</body>
+<html>
+    <head>
+        <title>Darius-FAQ</title>
+        <style>
+            .faq {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: rgb(160, 208, 246);
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="faq">
+            <h3 class="query">What is your name?</h3>
+            <h4 class="answer">I'm Darius, an AI Chatbot developed by PARL AI Studio</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">How does artificial intelligence work?</h3>
+            <h4 class="answer">AI mimics human thinking using algorithms.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What programming languages are commonly used in AI?</h3>
+            <h4 class="answer">Python, Java, C++, and R are popular.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">Can you explain machine learning?</h3>
+            <h4 class="answer">Machine learning lets computers learn from data.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What are neural networks?</h3>
+            <h4 class="answer">They're algorithms inspired by the brain.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">How do self-driving cars work?</h3>
+            <h4 class="answer">Sensors and AI help them navigate.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What is Elon Musk's role in AI development?</h3>
+            <h4 class="answer">He's an advocate for ethical AI.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">How do I get started with coding?</h3>
+            <h4 class="answer">Pick a language and practice online.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What are some good resources for learning coding?</h3>
+            <h4 class="answer">Try platforms like Codecademy or Coursera.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What are the benefits of learning to code?</h3>
+            <h4 class="answer">Problem-solving skills and job opportunities increase.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What is the difference between HTML and CSS?</h3>
+            <h4 class="answer">HTML structures webpages; CSS styles them.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">How do I make a website?</h3>
+            <h4 class="answer">Use HTML for content and CSS for styling.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What is the purpose of JavaScript?</h3>
+            <h4 class="answer">It adds interactivity to web pages.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">Can you recommend some coding projects for beginners?</h3>
+            <h4 class="answer">Try a simple website or calculator app.</h4>
+        </div>
+        
+        <div class="faq">
+            <h3 class="query">What is the difference between frontend and backend development?</h3>
+            <h4 class="answer">Frontend deals with the user interface; backend handles server-side logic.</h4>
+        </div>
+        
+        
+    </body>
 </html>
