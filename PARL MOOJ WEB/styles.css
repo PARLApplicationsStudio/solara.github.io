@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:rgb(28, 38, 59);
+    border-bottom: 1px solid #444;
+}
+
+header .logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    background-image: linear-gradient(rgb(39, 55, 90), rgb(35, 70, 85));
+}
+
+.call-screen {
+    text-align: center;
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.call-duration {
+    margin-bottom: 20px;
+}
+
+.call-controls {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.control-btn {
+    background-color: #303030;
+    border: none;
+    padding: 12px;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.control-btn:hover {
+    background-color: #292929;
+}
+
+.end-call {
+    background-color: #c41b16;
+}
+
+.end-call:hover {
+    background-color: #9c1a16;
+}
+
+@media (max-width: 600px) {
+    .control-btn {
+        padding: 10px;
+    }
+    .control-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}

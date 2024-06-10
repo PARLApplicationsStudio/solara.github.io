@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARL Mooj - Voice Call</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icons8 Windows 11 White Filled Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Agora SDK -->
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="PARL Mooj Logo">
+            </div>
+            <h1>PARL Mooj</h1>
+        </header>
+        <main>
+            <div class="call-screen">
+                <div class="user-info">
+                    <img src="images/user-avatar.png" alt="User Avatar" class="user-avatar">
+                    <h2 id="username">John Doe</h2>
+                    <p id="call-status">Calling...</p>
+                </div>
+                <div class="call-duration">
+                    <p>Duration: <span id="call-duration">00:00</span></p>
+                </div>
+                <div class="call-controls">
+                    <button id="mute-btn" class="control-btn"><img width="28" height="28" src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/microphone.png" alt="microphone"/></button>
+                    <button id="end-call-btn" class="control-btn end-call"><img width="28" height="28" src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/end-call.png" alt="end-call"/></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
